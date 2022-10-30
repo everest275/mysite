@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<!-- Pagina principal y unica de la aplicacion -->
+<html lang="en">
+
+<!-- Links y Scripts variados -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" &amp;gt;>
+    <link href="./style.css" rel="stylesheet">
+    <script src="index.js" type="module"></script>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+<!-- Links y Scripts variados -->
+
+
+<!-- Contendio y componentes -->
+<body>
+
+    <!-- Navegador y cabecera -->
+    <header>
+        <div class="nav"></div>
+    </header>
+     <!-- Navegador y cabecera -->
+
+    <!-- componentes principales -->
+    <main>
+
+        <!-- Seccion de la tarjeta -->
+        <section>
+            <div class="contenedor">
+                <div class="wrapper">
+                    <div class="ticket">
+                        <div class="titulo-tarjeta">Software & Web Developer</div>
+                        <picture>
+                            <img class="foto" src="https://i.postimg.cc/Xqkjf8P2/foto-Perfil.jpg" alt="foto-Perfil">
+                        </picture>
+                    </div>
+                    <div class="bg"> </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion de la tarejta -->
+
+
+        <!-- Seccion del cielo -->
+        <section>
+            <div class="contenedor">
+                <div class="universo">
+
+                    <div class="mercurio"></div>
+
+                    <div class="estrella tierra"></div>
+                    <div class="estrella dos">
+                    </div>
+                    <div class="estrella tres">
+                    </div>
+                    <div class="estrella cuatro">
+                    </div>
+
+                    <div class="estrella cinco">
+                    </div>
+                    <div class="estrella seis">
+                    </div>
+                    <div class="venus"></div>
+                    <div class="estrella siete">
+
+                    </div>
+                    <div class="estrella ocho">
+                    </div>
+                    <div class="estrella nueve">
+                    </div>
+                    <div class="moon-container">
+                        <div class="moon"></div>
+                    </div>
+                    <div class="brillosol"></div>
+
+                    <div class="sol">
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Seccion del cielo -->
+
+
+        <!-- Seccion Titulo de Proyectos -->
+        <section>
+            <div class="contenedor">
+                <div class="letras-contenedor">
+                    <h1 class="letras">
+                        <span style="--start-color:#007CF0; --end-color:#00DFD8; --content: 'Develop';"
+                            class="letra">Develop</span>
+                        <span class="letra"
+                            style="--start-color:#7928CA; --end-color:#FF0080; --content: 'Proyects'; --animation:a2;">Proyects</span>
+                        <span class="letra"
+                            style="--start-color:#FF4D4D; animation-name:a3; --end-color:#F9CB28; --content: 'Ship'; --animation: a3">Ship</span>
+                    </h1>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Titulo de Proyectos -->
+
+        <!-- Seccion Despliegue de proyectos -->
+        <section>
+            <div class="contenedor">
+                <div class="proyectos-body">
+                    <div class="container-proyects" id="proyects-list">
+                    </div>
+                    <!-- fin de contenedor de proyectos -->
+                </div>
+            </div>
+        </section>
+        <!-- Seccion Despliegue de proyectos -->
+
+        <!-- Seccion de Comentarios -->
+        <section>
+            <div class="contenedor">
+
+                <div class="comentarios">
+                    
+                    <h2 class="comentarios-titulo">Let your coment in the chat!</h2>
+                    <button class="open-login" id="open-login">Get sarted!</button>
+                    <div class="form-comentarios">
+                        <form id="comentarios-form">
+                            <div class="input-comentario">
+                                <input name="comentario" placeholder="Here! Type & coment something!" id="comentario"/>
+                            </div>
+
+                            <div class="input-comentario">
+                                <input type="submit" name="enviar-comentario" id="enviar-comentario" value="Send" class="boton-neumorfismo">
+                            </div>
+                        </form>
+                      
+                    </div>
+
+                    <div class="lista-comentarios">
+
+                        <table class="tabla-comentarios">
+
+                            <tbody id="coments-list" class="tabla-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="dw-cv" id="dw-cv">Downnload my Cv now!</button>
+        </section>
+        <!-- Seccion de Comentarios -->
+
+<!-- Terminando Componentes Principales -->
+    </main>
+    <!-- Aqui termina la seccion del main -->
+
+    <!-- Seccion del footer -->
+    <footer>
+        <section>
+            <div class="contenedor">
+
+                <div class="ola-contenedor">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                        <path fill="black" fill-opacity="1"
+                            d="M0,256L48,240C96,224,192,192,288,197.3C384,203,480,245,576,256C672,267,768,245,864,218.7C960,192,1056,160,1152,170.7C1248,181,1344,235,1392,261.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="body-footer">
+                    <div class="linkeldn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 20 20">
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                  </svg>
+                </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Seccion del footer -->
+
+
+    <!-- Seccion de Modal de Login o Crear Cuenta -->
+    <section class="modal-login" id="login-ventana">
+        <div class="modalLogin-container"><div class="cerrar-modal">
+            <a href="#" class="modalLogin-close" id="cerrar-login"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+              </svg></a>
+            </div>
+
+            <h2 class="modalLogin-title">Let's chat</h2>
+            <p class="modalLogin-paragraph">To be able to chat and interact 
+                in the app for security and the legal process 
+                you need to login with MySite, Facebook, Google or Github account.
+            </p>
+
+            <div class="formularios">
+
+            <div class="form-login-container">
+                <form class="form-login">
+                    <h6>Email</h6>
+                    <input type="text" id="inp-logi-frm" name="user">
+                    <h6>Password</h6>
+                    <input type="password" id="inp-logi-frm" name="password">
+                    <input type="submit" id="btn-login-signin" value="Login">
+                </form>
+            </div>
+            <div class="form-create-container">
+                <form class="form-create">
+                    <h6>New Username</h6>
+                    <input type="text" id="inp-logi-frm" name="user">
+                    <h6>New Password</h6>
+                    <input type="password" id="inp-logi-frm" name="password">
+                    <h6>Confirm Password</h6>
+                    <input type="password" id="inp-logi-frm" name="confirm">
+                    <input type="submit" id="btn-create-account" value="Create">
+                </form>  
+            </div>
+            
+        </div>
+        <button class="btn-login-direction">Create New Account</button>
+                <div class="logos-login">
+               
+                <button class="boton-login-facebook">
+                    <picture>
+                    <img src="https://i.postimg.cc/zvFXDSY1/facebook.png" alt="facebook">
+                </picture>
+            </button>
+            <button class="boton-login-google">
+                <picture>
+                    <img src="https://i.postimg.cc/L6m8C7j4/buscar.png" alt="buscar">
+                </picture>
+            </button>
+            <button class="boton-login-github">
+                <picture>
+                    <img src="https://i.postimg.cc/Y9fhjwQV/github.png" alt="github">
+                </picture>
+                
+            </button>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Seccion de Modal de Login o Crear Cuenta -->
+
+
+
+<!-- Seccion de Scripts -->
+<script src="./touch.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+ <!-- Seccion de Scripts -->
+
+</body>
+<!-- Contendio y componentes -->
+
+</html>

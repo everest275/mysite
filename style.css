@@ -1,0 +1,809 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color:#eee;
+}
+
+main section .contenedor {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+main section .contenedor .universo {
+    margin-top: 90px;
+    padding-top: 30px;
+    padding-bottom: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.719);
+    width: 100%;
+    height: 130px;
+    background:
+        radial-gradient(circle at bottom, rgb(0, 0, 89) 0%, black 100%)
+}
+
+.wrapper {
+    perspective: 1000px;
+}
+
+.ticket {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px inset rgba(0, 0, 0, 0.06);
+    width: 350px;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    /* background: rgb(255, 255, 255); */
+    background: white;
+}
+
+.foto {
+    min-width: 100px;
+    max-width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    max-height: 110px;
+    background-color: rgb(277, 277, 277, .5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px inset yellow;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.logos-login button{
+    margin: 20px;
+    padding:10px;
+}
+.bg {
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    filter: blur(20px);
+    width: 100% auto;
+    height: 100% auto;
+    margin-right: -15px;
+    margin-bottom: -30px;
+    margin-left: -15px;
+    margin-top: 30px;
+}
+
+main section .titulo-tarjeta {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+    background: linear-gradient(-45deg, #111, rgb(255, 213, 89),
+    yellow, rgb(255, 242, 97),#111, #111);
+    background-size: 300%;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animated_title-ticket 6s ease-in-out infinite;
+    -moz-animation: animated_title-ticket 6s ease-in-out infinite;
+    -webkit-animation: animated_title-ticket 6s ease-in-out infinite;
+}
+
+@keyframes animated_title-ticket {
+    0% {
+        background-position: 0px 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0px 50%;
+    }
+}
+
+.estrella {
+    width: 0.1px;
+    height: 1px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.703);
+    box-shadow: 0 0 10px 1px white;
+    border: none;
+}
+
+.estrella.tierra {
+    margin-left: 20px;
+    border: 1px outset rgba(0, 0, 255, 0.053);
+    align-self: flex-start;
+    width: 6px;
+    height: 70px;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.384);
+    background: linear-gradient(to right, rgb(0, 178, 209), rgb(1, 217, 255));
+}
+
+.estrella.dos {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.estrella.tres {
+    align-self: flex-start;
+    margin-left: 20%;
+    width: 2px;
+    height: 3px;
+    margin-bottom: 10px;
+}
+
+.estrella.cuatro {
+    align-self: flex-start;
+    margin-left: 30%;
+}
+
+.estrella.cinco {
+    align-self: flex-start;
+    margin-left: 40%;
+}
+
+.estrella.seis {
+    align-self: flex-end;
+    margin-right: 5%;
+    width: 2px;
+    height: 3px;
+}
+
+.estrella.siete {
+    align-self: flex-end;
+    margin-right: 20%;
+}
+
+.estrella.ocho {
+    align-self: flex-end;
+    margin-right: 30%;
+}
+
+.estrella.nueve {
+    align-self: flex-end;
+    margin-right: 45%;
+    width: 2px;
+    height: 3px;
+}
+
+.moon {
+    height: 4px;
+    width: 5px;
+    box-shadow: 0 0 15px 2px white;
+    border-radius: 55%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.084), white);
+}
+
+.sol {
+    margin-top: -30px;
+    width: 32px;
+    height: 150px;
+    padding-top: 20px;
+    background: linear-gradient(to top, #ffaa3b, rgb(255, 213, 0), rgb(255, 213, 0), rgb(255, 213, 0),
+            #ffaa3b, rgb(255, 213, 0));
+    border-radius: 50%;
+    margin-bottom: 50px;
+    box-shadow: 0 0 150px 50px white
+}
+
+.brillosol {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background: WHITE;
+    box-shadow: 1px -16px 14px 13px white;
+    border: none;
+}
+
+picture img {
+    max-width: 300px;
+    mix-blend-mode: multiply;
+    filter: grayscale(10%);
+}
+
+main section .contenedor .letras {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -.06rem;
+    text-align: center;
+    margin: 0 0 16px;
+}
+
+.letra {
+    padding-bottom: 10px;
+    color: #fff;
+    display: block;
+    line-height: 1.1;
+    font-size: 50px;
+    position: relative;
+}
+
+.letra::before {
+    animation-name: var(--animation, a);
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(90deg, var(--start-color), var(--end-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    inset: 0;
+    content: var(--content);
+    opacity: 1;
+}
+
+@keyframes a {
+
+    0%,
+    16.667%,
+    100% {
+        opacity: 1;
+    }
+
+    33.333%,
+    83.333% {
+        opacity: 0;
+    }
+}
+
+@keyframes a2 {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    33.333%,
+    50% {
+        opacity: 1;
+    }
+
+    16.667%,
+    66.667% {
+        opacity: 0;
+    }
+}
+
+@keyframes a3 {
+
+    0%,
+    50%,
+    100% {
+        opacity: 0;
+    }
+
+    66.667%,
+    83.333% {
+        opacity: 1;
+    }
+}
+
+.letras-contenedor {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 250px;
+    background: black;
+    display: grid;
+    place-content: center;
+}
+
+.moon-container {
+    align-self: flex-start;
+    margin-left: 5%;
+    margin-bottom: 15px;
+}
+
+.mercurio {
+    width: 3px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, rgb(202, 172, 63), rgb(125, 54, 0));
+    box-shadow: 0 0 10px 1px white;
+    border: 1px solid rgb(202, 172, 63);
+}
+
+.venus {
+    align-self: center;
+    margin-left: 50%;
+    width: 8px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(to right, rgb(255, 174, 0), rgb(6, 4, 0));
+    box-shadow: 0 0 25px 2px white;
+}
+
+.proyectos-body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: black
+}
+
+.container-proyects {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container-proyects .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container-proyects .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container-proyects .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.container-proyects .card .content h2 {
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.container-proyects .card .content h3 {
+    font-size: 50px;
+    color:black;
+    z-index: -1;
+}
+
+.container-proyects .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.container-proyects .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.comentarios {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%; 
+   margin-left: 20px;
+   
+}
+
+.lista-comentarios {
+    overflow-y: scroll;
+    width: 90%;
+    height: 300px;   
+}
+.lista-comentarios::-webkit-scrollbar{
+       width:7px;  
+           
+}
+.lista-comentarios::-webkit-scrollbar-thumb:vertical:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+.lista-comentarios::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+
+.lista-comentarios .tabla-comentarios {
+    background-color: white;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 70%;
+}
+
+.lista-comentarios .tabla-campo {
+    display: flex;
+    padding: 10px;
+}
+.dateDesign{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:10px;
+    font-style: italic;
+    padding-bottom: 5px;
+}
+.conectedVisible{
+    margin-left: 10px;
+}
+
+.userChatDesign{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:15px;
+}
+.comDesi{
+   margin-left: -65px;
+    font-weight: normal;
+    margin-top: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:15px;
+}
+.editComent{
+   display: flex;
+   width: 50%;
+}
+.editComent svg{
+    align-self: flex-end;
+}
+.card-coment{
+    width: 100%;
+    margin-top: -30px;
+    background:transparent; 
+}
+.user-section-coment,.coment-section-coment{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+.editComent{
+    margin-left: 95%;
+}
+.coment-section-coment{
+    margin-top: -50px;
+}
+ .btn-secondary {
+    margin-left: -10px;
+    height: 35px;
+    margin-top: -80px;
+    
+}
+.modal-login{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#111111bd;
+    display: flex;
+    z-index: +1;
+    opacity: 0;
+    pointer-events: none;
+}
+.modalLogin-container{
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+   background:#fff;
+   border-radius: 6px;
+    padding:3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns:100%; 
+   
+}
+.modalLogin-title{
+    font-size: 2.5rem;
+    margin-top:-40px;
+}
+.modalLogin-paragraph{
+    margin-bottom: 10px;
+}
+.modalLogin-close{   
+    align-self: flex-end;
+    text-decoration: none;
+    color: rgb(255, 94, 0);
+    padding:0.5em 1em;
+    border-radius: 50%;
+   width: 45px;
+    display:inline-block;
+    font-weight: 300px;
+    transition: background-color .3s;
+}
+.modalLogin-close:hover{
+    transition: .3s;
+    color:yellow;
+   
+}
+ .modalLogin--show{
+   opacity: 1;
+   pointer-events: unset;
+ }  
+
+.logos-login img{
+    max-width:30px;
+    max-height:30px;
+    
+}
+.dropdown .btn {
+    background-color:transparent;
+    height: 34px;
+    margin-top: -40px;  
+}
+.logos-login{
+    display: flex;
+}
+.open-login{
+    width:70%;
+    margin:80px;
+   font-weight:bold;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #0086df;
+    color: rgb(24, 24, 24);
+    border: 4px inset rgba(0, 0, 0, 0.01);    border-radius: .5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 3px rgba(0, 0, 255, 0.591);
+    font-size: 35px;
+    padding: 40px;
+    
+}
+.open-login{
+    transition: all 1s ease-in-out;
+}
+.open-login:hover{
+    transition: .1s;
+    font-size: 40px;
+    
+}
+
+.open-login{
+    margin:30px;  
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.263); 
+   
+}
+.body-footer{
+    background:#000;
+    width: 100%;
+    height: 50px;
+}
+.linkeldn{
+    margin-left: 50%;
+}
+footer section svg{
+    transition: 1.5s ease-out;
+}
+footer section svg:hover{
+    color: rgba(0, 115, 255, 0.774);
+    transition: .3s;
+    
+}
+
+.input-comentario #comentario{
+    width:300px;
+    border: solid 0.5px rgb(172, 172, 172);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.input-comentario #comentario:focus{
+    outline:none;
+    border-color: black;
+} 
+
+.open-login:focus{
+    transition: .3s;
+    
+}
+
+#enviar-comentario{
+    width:30%;
+    margin:20px;
+    height: 40px;
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #03eb5c;
+     color: black;
+     border: 2px outset rgba(0, 0, 0, 0.01);
+     border-radius: .5rem;
+     cursor: pointer;
+     box-shadow: 0px 0px 30px 3px green,
+     -0rem -0rem 1rem white;
+     text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+     font-size: 20px;
+     
+}
+#enviar-comentario:hover{
+    transition: .3s;
+ font-size: 25px;
+ 
+    
+}
+#enviar-comentario:active{
+    transition: .3s;
+    background:yellow;
+    
+    
+}
+.link-page,.link-git{
+    margin:20px;
+}
+.link-page{
+    margin-right: 5px;
+}
+.links-proyects{
+    display: flex;
+    margin-left: 32%;
+}
+.links-proyects svg{
+    transition: 1.5s ease-out;
+}
+.links-proyects svg:hover{
+    color: rgba(0, 115, 255, 0.774);
+    transition: .3s;
+}
+.proyect-description{
+    
+    font-weight: bold;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.263);
+    color:rgb(247, 254, 254);
+}
+.proyect-title{
+    
+    font-weight: bold;
+    text-shadow: 6px 6px rgba(0, 0, 0, 0.263);
+}
+.proyect-image{
+   object-fit: contain;
+    background-color: rgb(277, 277, 277, .5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px inset yellow;
+}
+.dw-cv{
+   
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+    font-weight: bold;
+    background:#dfc100;
+    border: 3px outset rgba(0, 0, 0, 0.2);
+    color: black;
+    border-radius:6px;
+    box-shadow: 9px 9px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    width: 200px;
+    height: 100px;
+    cursor: pointer;
+    transition: 1.5s ease-out;
+    font-size: 20px;
+}
+.dw-cv:hover{
+    transition: .3s;
+    width: 240px;
+    height: 100px;
+}
+.form-ularios{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+.form-create-container{
+    margin-top: -50%;
+}
+.logos-login button{
+    margin-top:-5px;
+}
+.cerrar-modal{
+    padding: 5px;
+    margin-top: -50px;
+    margin-right: 100px;
+    display: relative;  
+    width: 100%;
+    
+   
+ 
+}
+
+.comentarios-titulo{
+    color: #444;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.263);
+}
+.btn-login-direction{
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #fff;
+     color: black;
+     border: 2px inset rgba(0, 0, 0, 0.01);
+     border-radius: .5rem;
+     cursor: pointer;
+     box-shadow: 0px 1px 0px 2px rgba(0, 0, 0, 0.7);
+     text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+}
+#btn-create-account{
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #6beb03;
+     color: black;
+     border: 2px inset rgba(0, 0, 0, 0.01);
+     border-radius: .5rem;
+     cursor: pointer;
+     box-shadow: 0px 1px 0px 2px rgba(0, 0, 0, 0.7);
+     text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+     margin-left: 20px;
+     margin-top: 7px;
+}
+#btn-login-signin{
+    margin-left: 20px;
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+     background-color: #5403eb6c;
+     color: black;
+     border: 2px inset rgba(0, 0, 0, 0.01);
+     border-radius: .5rem;
+     cursor: pointer;
+     box-shadow: 0px 1px 0px 2px rgba(0, 0, 0, 0.7);
+     text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+}
+.formularios h6{
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.263);
+    margin:5px;
+
+}
+.modalLogin-title{
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.263);
+    
+}
+.logos-login button{
+    border:none;
+    border-radius:50%;
+}
+
+#inp-logi-frm{
+    border:solid 2px rgba(0, 0, 0, 0.8);
+    box-shadow: 2px 2px 0px 1px rgba(0, 0, 0, 0.8);
+   
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .ticket {
+        width: 300px;
+    }
+    .btn-secondary {
+        margin-left: -15px;    
+    }
+    
+   
+}
+
